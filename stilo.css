@@ -195,13 +195,13 @@ button {
 .chatbox__entrada {
   margin-top: 10px;
   margin-bottom: 10px;
-  float: right;
+  float: right; /* Alinha a mensagem à direita */
   position: relative;
   display: inline-block;
   padding: 5px 20px;
   border-radius: 15px;
   cursor: default;
-  background: #f1f1f1;
+  background: #0084ff; /* Background color for user's sent messages */
   transition: all 0.12s;
 }
 

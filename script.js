@@ -10,6 +10,22 @@ const messageInput = document.querySelector("#message-input");
 const sendButton = document.querySelector("#send-button");
 const clearButton = document.querySelector("#clear-button");
 
+// Function to display a welcome message when the chatbox opens
+function showWelcomeMessage() {
+  const welcomeMessage = "Olá! Eu Zaila. Como posso ajudar você hoje?";
+  const messageItem = document.createElement("li");
+  messageItem.textContent = welcomeMessage;
+  messageItem.classList.add("received");
+  messageItem.classList.add("chatbox__message");
+  messageList.appendChild(messageItem);
+  scrollToBottom();
+}
+
+// Event listener for the DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", function () {
+  showWelcomeMessage();
+});
+
 // Função que envia a pergunta para o endpoint personalizado e exibe a resposta na interface do usuário
 async function sendMessage() {
   // Verifica se já há uma pergunta sendo processada
